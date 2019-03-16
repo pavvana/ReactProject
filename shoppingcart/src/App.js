@@ -58,7 +58,7 @@ render(){
           <div className={'cls-3'}>
           <footer>
           
-          <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+          <p className='FooterContent'>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
           </footer>
           </div>
           
