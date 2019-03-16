@@ -1,0 +1,26 @@
+.ProductContainer{
+    
+    width: 400px;
+    height: 80px;
+    border: 2px solid green;
+    padding: 1px;
+    margin: 10px;
+    background-color:white
+}
+
+.ProductContainerL{
+    width:100px;
+display : inline-block;
+margin: 20px;
+}
+.ProductContainerM{
+    width:100px;
+    display : inline-block;
+    margin: 10px;
+}
+.ProductContainerR{
+    width:100px;
+    display : inline-block;
+    margin: 10px;
+    text-align: right;
+}
