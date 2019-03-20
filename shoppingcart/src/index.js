@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Merger from './merger';
+import App from './App';
 
-ReactDom.render(<Merger /> , document.getElementById('root'));
+ReactDom.render(<App /> , document.getElementById('root'));

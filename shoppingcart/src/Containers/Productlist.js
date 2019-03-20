@@ -1,10 +1,12 @@
 import React,{Component } from 'react';
-import ProductView from './ProductView/ProductView';
+import ProductView from '../Views/ProductView/ProductView';
 class Productlist extends Component {
 
 constructor(props){
     super(props);
+    
     this.state = {
+
         mobiles:[
                 {
                     name:'samsung',
@@ -43,6 +45,10 @@ constructor(props){
 }
 
 render(){
+
+
+
+
 return(<div>
         {
             this.state.mobiles.map((mobile,index) => {
