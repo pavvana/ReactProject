@@ -47,18 +47,27 @@ constructor(props){
 render(){
 
 
+    console.log(this.props.location);
 
+
+//    let name = this.props.location.data.username;
+    
 
 return(<div>
-        {
+  
+        
+        <div>
+    
+        {//this is displaying product
             this.state.mobiles.map((mobile,index) => {
-
-                return ( <ProductView key={mobile.name+index} name={mobile.name} price={mobile.price} color={mobile.color} logo={mobile.logo}/> )
+                return (
+                    
+                    <ProductView key={mobile.name+index} name={mobile.name} price={mobile.price} color={mobile.color} logo={mobile.logo}/>
+                )
                 })
         }
-
-        
-</div>
+        </div>
+        </div>
 )
 
 }

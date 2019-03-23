@@ -1,25 +1,54 @@
-.cls-2 p{
-    display : inline-block;
-    color : red;
-    
-    
-    }
-    .cls-1{
-        width: 1200px;
+
+    .Headercontainer{
+        display : inline-block;
+        width: 1350px;
+        height:45px;
         border: 2px solid green;
-        padding: 1px;
-        margin: 10px;
+        padding: 2px;
+        margin: 6px;
         background-color:#FFFF99
     
     }
-    
-    .cls-3{
-    
-        width: 1200px;
-        border: 2px solid green;
-        padding: 1px;
-        margin: 10px;
-        background-color:#FFFF99
-    
-    
+
+    .logoicon{
+        display : inline-block;
+        width: 30px;
+        height:50px;
+    }
+
+    .gotoprolink{
+        display : inline-block;
+        width: 200px;
+        height:50px;
+        margin-left:25px;
+        text-align: right;
+    }
+    .searchtab{
+        display : inline-block;
+        width: 250px;
+        height:35px;
+        margin-left:30px;
+        margin-right: 100px;
+    }
+    .ObuttonL{
+        display : inline-block;
+        width: 220px;
+        height:35px;
+        margin-left:20px;
+        text-align: right;
+    }
+
+    .ObuttonS{
+        display : inline-block;
+        width: 50px;
+        height:35px;
+        margin-left:40px;
+    }
+
+    .cartlogo{
+        display : inline-block;
+        width: 50px;
+        height:35px;
+        margin-left:300px;
+
     }

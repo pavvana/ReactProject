@@ -1,4 +1,13 @@
+.footercontainer{
 
+    display : inline-block;
+        width: 1350px;
+        height:45px;
+        border: 2px solid green;
+        padding: 2px;
+        margin: 6px;
+        background-color:#FFFF99
+}
 
 .FooterContent{
 

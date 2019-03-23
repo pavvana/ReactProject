@@ -6,7 +6,7 @@ const ProductView = (props) => {
     return (
         <div className='ProductContainer'>
             <div className='ProductContainerL'>
-            <img src={props.logo} alt='Loading' height={50} width={50} />
+            <img src={props.logo} alt='Loading' height={70} width={80} />
             </div>
             <div className='ProductContainerM'>
                 <div> name :{props.name} </div>

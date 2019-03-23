@@ -1,19 +1,23 @@
 import React , {Component} from 'react';
-
+import {createBrowserHistory} from 'history';
+import Fronpage from './Containers/Fronpage';
 import './App.css';
-import Productlist from './Containers/Productlist';
+//
 import Header from './Containers/Header/Header';
 import Footer from './Containers/Footer/Footer';
+import RoutingHolder from './Containers/RoutingHolder';
+
+const history = createBrowserHistory();
 
 class App extends Component {
 
 render(){
 
   return ( <div className='root'>
-           <Header /> 
+           <Header history={history} /> 
+           
+            <RoutingHolder history={history}/>
 
-            <Productlist />
-          
             <Footer />          
           
           </div>);

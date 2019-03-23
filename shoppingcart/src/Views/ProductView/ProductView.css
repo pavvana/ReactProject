@@ -1,7 +1,7 @@
 .ProductContainer{
     
-    width: 400px;
-    height: 80px;
+    width: 700px;
+    height: 150px;
     border: 2px solid green;
     padding: 1px;
     margin: 10px;
@@ -10,16 +10,18 @@
 
 .ProductContainerL{
     width:100px;
+    height:200px;
 display : inline-block;
-margin: 20px;
+margin: 50px;
 }
 .ProductContainerM{
-    width:100px;
+    width:200px;
     display : inline-block;
     margin: 10px;
+    color: blue;
 }
 .ProductContainerR{
-    width:100px;
+    width:200px;
     display : inline-block;
     margin: 10px;
     text-align: right;
