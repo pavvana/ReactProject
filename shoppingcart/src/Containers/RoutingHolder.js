@@ -9,14 +9,19 @@ import Singnup from './Singnup';
                 
 
 class RoutingHolder extends Component {
+
+    
+    
+    
+
     render(){
         return(
                 <div>
                     <Router history={this.props.history}>
                     <Route path="/" component={Frontpage} exact={true}/> 
                         <Route path="/Loginpage" component={Login} exact={true}/> 
-                        <Route path="/products" component={Productlist}/>
-                        <Route path="/Signup" component={Singnup}/>
+                        <Route path="/products" component={ (props) => <Productlist {...props}count={this.props.count}/>}  />
+                        <Route path="/Signup" component={Singnup} />
                     </Router>
                 </div>
 

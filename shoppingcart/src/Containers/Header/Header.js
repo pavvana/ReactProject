@@ -8,7 +8,8 @@ class Header extends Component{
     constructor(props){
         super(props);
         this.state = {
-                searchValue:''
+                searchValue:'',
+                isgotoproddisplay:true
         }
     }
 
@@ -28,15 +29,35 @@ LoginClick=() => {
         pathname:'/Loginpage' 
         
     });
+ }
     
+ componentDidMount() {
+    let history = this.props.history;
 
-}
+    history.listen((data,action)=>{
+        if (data.pathname === '/products')
+        {
+            
+            this.setState({
+                isgotoproddisplay : false
+            }) 
+        }
+        else
+        {
+            this.setState({
+                isgotoproddisplay : true
+            })
+        }
 
-Replaceclick=() => {
+    });
+ }
+ 
+    
+ Replaceclick=() => {
     let history = this.props.history;
     
     history.replace({
-        pathname:'/Signup',
+        pathname:'/products',
         data :{
             username:'sawan',
             age:28
@@ -46,12 +67,15 @@ Replaceclick=() => {
 }
 
 render(){
+    
     return(
         <div className={'Headercontainer'}>
         
         <div className='logoicon'>Flipkart</div>
-
-        <div className='gotoprolink'><a href="/products">go to products</a></div>
+        {
+            this.state.isgotoproddisplay ? 
+            <div className='gotoprolink'><a href="/products">go to products</a></div> : null
+        }
 
         <div className='searchtab'><input  className='searchtab' type="text" name="t1" placeholder="Search Products, brands and  more" 
         onChange={this.onSearchEvent} value={this.state.searchValue}/></div>

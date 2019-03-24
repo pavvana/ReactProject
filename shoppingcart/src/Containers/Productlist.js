@@ -44,17 +44,20 @@ constructor(props){
     }
 }
 
+
+
 render(){
 
 
-    console.log(this.props.location);
+    console.log('testing.......'+this.props.count);
 
 
-//    let name = this.props.location.data.username;
+  let name = this.props.location.data.username;
     
 
 return(<div>
-  
+        <div>{this.props.count}</div>
+        <div>{name}</div>
         
         <div>
     

@@ -12,11 +12,12 @@ const history = createBrowserHistory();
 class App extends Component {
 
 render(){
+  const maxNoofitem= 2;
 
   return ( <div className='root'>
            <Header history={history} /> 
-           
-            <RoutingHolder history={history}/>
+
+            <RoutingHolder history={history} count={maxNoofitem}/>
 
             <Footer />          
           
