@@ -4,9 +4,21 @@ class Productlist extends Component {
 
 constructor(props){
     super(props);
+    console.log('Productlist param passed from another route',props.location);
+
+    let extraData =[];
+
+    if(props.location && props.location.data && props.location.data.products){
+        extraData = [...props.location.data.products]
+    }
+    let username = '';
+    if(props.location && props.location.state && props.location.state.username){
+        username = this.props.location.state.username
+    }
+
     
     this.state = {
-
+        username:username,
         mobiles:[
                 {
                     name:'samsung',
@@ -38,18 +50,25 @@ constructor(props){
                     price:200,
                     color:'white',
                     logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFBRdGo-cS2IYn6I7xFFsf62spfAUqo90hc0XpVPnTQTxy2MS'
-                }
-
+                },
+                ...extraData
         ]
     }
 }
 
+
+componentDidMount(){
+    // to guard this component i.e not to display when not logged in
+    let isLoggedIn = false; // temp asume not logged in
+    if(!isLoggedIn){
+       // this.props.history.replace('/login');
+    }
+}
+
 render(){
-
-
-
-
 return(<div>
+        <p>{this.props.title}</p>
+        <p>{this.state.username}</p>
         {
             this.state.mobiles.map((mobile,index) => {
 
