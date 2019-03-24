@@ -3,6 +3,12 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 
 class Login extends Component {
+
+    submitLogin = () => {
+        sessionStorage.setItem('isloggedIn','Yes');
+        this.props.history.replace('/products');
+    }
+
     render(){
         return(
             <div className='Logincontainer'> 
@@ -17,7 +23,7 @@ class Login extends Component {
           <Input type="password" name="password" id="examplePassword" placeholder="Password" />
         </FormGroup>
         {' '}
-        <Button>Submit</Button>
+        <Button onClick={this.submitLogin}>Submit</Button>
       </Form>
             </div>
                 

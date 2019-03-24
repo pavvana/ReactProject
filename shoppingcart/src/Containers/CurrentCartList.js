@@ -3,7 +3,7 @@ import React,{Component } from 'react';
 import ProductView from '../Views/ProductView/ProductView';
 import IsAuthenticated from '../hoc/IsAuthenticated';
 
-class Productlist extends Component {
+class CurrentCartList extends Component {
 
 constructor(props){
     super(props);
@@ -23,35 +23,17 @@ constructor(props){
                     price:5000,
                     color:'black',
                     logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFBRdGo-cS2IYn6I7xFFsf62spfAUqo90hc0XpVPnTQTxy2MS'
-                },
-                {
-                    name:'motorolla',
-                    price:7000,
-                    color:'red',
-                    logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFBRdGo-cS2IYn6I7xFFsf62spfAUqo90hc0XpVPnTQTxy2MS'
-                },
-                {
-                    name:'iphone',
-                    price:20000,
-                    color:'yellow',
-                    logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFBRdGo-cS2IYn6I7xFFsf62spfAUqo90hc0XpVPnTQTxy2MS'
-                },
-                {
-                    name:'xiomi',
-                    price:200,
-                    color:'white',
-                    logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFBRdGo-cS2IYn6I7xFFsf62spfAUqo90hc0XpVPnTQTxy2MS'
                 }
-
         ]
     }
 }
+
 
 render(){
 console.log('testing.......'+this.props.count);  
 
 return(<div>
-        <div>
+        <p>Current items in your cart</p>
     
         {//this is displaying product
             this.state.mobiles.map((mobile,index) => {
@@ -62,11 +44,10 @@ return(<div>
                 })
         }
         </div>
-        </div>
 )
 
 }
 
 }
 
-export default IsAuthenticated(Productlist);
+export default IsAuthenticated(CurrentCartList);
