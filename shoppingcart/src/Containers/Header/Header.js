@@ -1,5 +1,6 @@
  import React , { Component } from 'react';
  import { Button } from 'reactstrap';
+ import { connect } from 'react-redux';
 
 import './Header.css';
 
@@ -67,27 +68,38 @@ LoginClick=() => {
 }
 
 render(){
-    
+    console.log('Header', this.props)
     return(
         <div className={'Headercontainer'}>
         
-        <div className='logoicon'>Flipkart</div>
-        {
-            this.state.isgotoproddisplay ? 
-            <div className='gotoprolink'><a href="/products">go to products</a></div> : null
-        }
+            <div className='logoicon'>Flipkart</div>
+            {
+                this.state.isgotoproddisplay ? 
+                <div className='gotoprolink'><a href="/products">go to products</a></div> : null
+            }
 
-        <div className='searchtab'><input  className='searchtab' type="text" name="t1" placeholder="Search Products, brands and  more" 
-        onChange={this.onSearchEvent} value={this.state.searchValue}/></div>
+            <div className='searchtab'><input  className='searchtab' type="text" name="t1" placeholder="Search Products, brands and  more" 
+            onChange={this.onSearchEvent} value={this.state.searchValue}/></div>
 
-        <div className='ObuttonL'><Button color="primary" size="sm" onClick={this.LoginClick} >Login</Button></div>
+            <div className='ObuttonL'><Button color="primary" size="sm" onClick={this.LoginClick} >Login</Button></div>
 
-        <div className='ObuttonS'><Button color="primary" size="sm" onClick={this.Replaceclick} >SingnUp</Button></div>
+            <div className='ObuttonS'><Button color="primary" size="sm" onClick={this.Replaceclick} >SingnUp</Button></div>
 
-        <div className='cartlogo'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlz8lzPKDvLHC_xlou9dXw2S9e0x05ZgER8FDEK9IeUjx05QQm"
-        alt="Cart" height="20" width="20"></img></div>
-                </div>
+            <div className='cartlogo'>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlz8lzPKDvLHC_xlou9dXw2S9e0x05ZgER8FDEK9IeUjx05QQm"
+                alt="Cart" height="20" width="20"/>
+                <span>{this.props.currentCartCount}</span>
+            </div>
+        </div>
          )
         }    
 }
-export default Header;
+
+const mapStateToProps = (state) => {
+    console.log('state in mapStateToProps',state)
+    return {
+        currentCartCount:state.currentCartCount
+    }
+}
+
+export default connect(mapStateToProps)(Header);

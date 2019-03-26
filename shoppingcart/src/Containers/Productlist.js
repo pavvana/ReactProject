@@ -1,5 +1,6 @@
 import React,{Component } from 'react';
 
+
 import ProductView from '../Views/ProductView/ProductView';
 import IsAuthenticated from '../hoc/IsAuthenticated';
 
@@ -69,4 +70,4 @@ return(<div>
 
 }
 
-export default IsAuthenticated(Productlist);
+export default  IsAuthenticated(Productlist);
