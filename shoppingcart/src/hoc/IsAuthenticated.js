@@ -20,7 +20,7 @@ const IsAuthenticated = (RawComponent) => {
         }
         
         render(){
-            return(<RawComponent/>)
+            return(<RawComponent {...this.props} />)
         }
     }
 }

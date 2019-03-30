@@ -1,5 +1,8 @@
 import React from 'react';
-import './ProductView.css'
+
+import './ProductView.css';
+
+
 
 const ProductView = (props) => {
 
@@ -14,7 +17,10 @@ const ProductView = (props) => {
                 <div> color :{props.color} </div>
             </div>
             <div className='ProductContainerR'>
-                <input type="button" value='Add to cart' /> 
+                <input type="button" value='Add to cart' onClick={()=>{
+                    props.addToCart(props.name)
+                    props.increment()
+                    } }/> 
             </div>
         </div>);
 

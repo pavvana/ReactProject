@@ -1,0 +1,2 @@
+export const INCREMENT_BY_ONE = "INCREMENT_BY_ONE";
+export const ADD_PRODUCT_TO_CART = "ADD_PRODUCT_TO_CART";

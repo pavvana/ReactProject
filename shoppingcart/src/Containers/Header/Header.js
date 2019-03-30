@@ -88,7 +88,7 @@ render(){
             <div className='cartlogo'>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlz8lzPKDvLHC_xlou9dXw2S9e0x05ZgER8FDEK9IeUjx05QQm"
                 alt="Cart" height="20" width="20"/>
-                <span>{this.props.currentCartCount}</span>
+                <span>{this.props.displayCount}</span>
             </div>
         </div>
          )
@@ -98,7 +98,7 @@ render(){
 const mapStateToProps = (state) => {
     console.log('state in mapStateToProps',state)
     return {
-        currentCartCount:state.currentCartCount
+        displayCount:state.currentCartCount
     }
 }
 
