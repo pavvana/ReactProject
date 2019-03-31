@@ -1,8 +1,18 @@
 import React,{Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
+import { connect } from 'react-redux';
+
+import loadPostsActions from '../redux/actions/postActions';
+
 class Singnup extends Component{
+
+componentDidMount(){
+  loadPostsActions.loadPosts();
+}
+
 render(){
+  console.log('SignUp', this.props);
     return(
         <Form>
         <FormGroup>
@@ -23,4 +33,9 @@ render(){
 
 }
 
-export default Singnup;
+const mapStateToProps = (state) => {
+  return{
+    posts: state.postReducer.posts
+  }
+}
+export default connect(mapStateToProps)(Singnup);

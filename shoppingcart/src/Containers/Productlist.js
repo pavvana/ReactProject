@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+
 
 import ProductView from '../Views/ProductView/ProductView';
 import IsAuthenticated from '../hoc/IsAuthenticated';
@@ -61,7 +61,7 @@ class Productlist extends Component {
                         return (
 
                             <ProductView key={mobile.name + index} name={mobile.name} price={mobile.price} color={mobile.color} logo={mobile.logo}
-                                addToCart={this.props.addToCart} increment={this.props.increment}
+                                
                             />
                         )
                     })
@@ -72,11 +72,4 @@ class Productlist extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        increment: () => dispatch(incrementByOne()),
-        addToCart: (productName) => dispatch(addProductToCart())
-    }
-}
-
-export default connect(null, mapDispatchToProps)(IsAuthenticated(Productlist));
+export default IsAuthenticated(Productlist);

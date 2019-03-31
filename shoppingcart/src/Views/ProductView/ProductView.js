@@ -1,5 +1,7 @@
 import React from 'react';
 
+import cartActions from '../../redux/actions/cartActions';
+
 import './ProductView.css';
 
 
@@ -18,8 +20,8 @@ const ProductView = (props) => {
             </div>
             <div className='ProductContainerR'>
                 <input type="button" value='Add to cart' onClick={()=>{
-                    props.addToCart(props.name)
-                    props.increment()
+                    cartActions.addProductToCart(props.name)
+                    cartActions.incrementByOne()
                     } }/> 
             </div>
         </div>);

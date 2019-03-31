@@ -58,7 +58,7 @@ LoginClick=() => {
     let history = this.props.history;
     
     history.replace({
-        pathname:'/products',
+        pathname:'/Signup',
         data :{
             username:'sawan',
             age:28
@@ -98,7 +98,7 @@ render(){
 const mapStateToProps = (state) => {
     console.log('state in mapStateToProps',state)
     return {
-        displayCount:state.currentCartCount
+        displayCount:state.cartReducer.currentCartCount
     }
 }
 
